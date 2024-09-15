@@ -45,9 +45,19 @@ git clone https://github.com/srinesh-vyd/Retail-Orders-Python-SQLProject.git
 cd Retail-Orders-Python-SQLProject
 ```
 2. Create a new python environment
-3. Create a new Jupter notebook 
+3. Open the retail_orders.ipynb notebook and follow the steps inside.
 3. Install required Python libraries:
 ```jupyter
 !pip install kaggle
 import kaggle
 ```
+4. Set up the Kaggle API:
+      - Create a Kaggle account and generate an API token.
+      - Place the API token file (kaggle.json) in the appropriate directory (~/.kaggle/ for Linux/Mac or C:\Users\YourUsername\.kaggle\ for Windows).
+5. Create a MySQL database and configure the DSN (Data Source Name) for pyodbc. Update the notebook with your connection details.
+
+## Datasets
+The dataset used for this project was sourced from Kaggle. It was downloaded using the Kaggle API and saved as a CSV file.
+
+### Steps to download the dataset:
+Inside the Jupyter notebook, use the Kaggle API to download and extract the dataset:
