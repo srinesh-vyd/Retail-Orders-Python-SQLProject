@@ -61,3 +61,23 @@ The dataset used for this project was sourced from Kaggle. It was downloaded usi
 
 ### Steps to download the dataset:
 Inside the Jupyter notebook, use the Kaggle API to download and extract the dataset:
+```jupyter
+!kaggle datasets download -d ankitbansal06/retail-orders
+import zipfile
+zip_ref=zipfile.ZipFile("retail-orders.zip")
+zip_ref.extractall()
+zip_ref.close()
+```
+After downloading, the dataset is extracted, loaded into a Pandas DataFrame, and prepared for further transformation.
+## Data Transformation
+Once the dataset was loaded into a Pandas DataFrame, the following transformations were applied:
+1. Handling Missing Data: Missing values were identified. Values such as 'Not available' and 'unknown' were converted to nan.
+2. Data Type Conversion: Ensured that columns had the correct data types (e.g., converting object type columns to datetime).
+3. Renaming Columns: Some columns were renamed for clarity and consistency.
+```
+import pandas as pd
+df=pd.read_csv("orders.csv",na_values=['Not Available', 'unknown'])
+df.columns=df.columns.str.lower()
+df.columns=df.columns.str.replace(' ','_')
+df['order_date']=pd.to_datetime(df['order_date'])
+```
