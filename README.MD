@@ -44,3 +44,10 @@ Make sure the following are installed on your system:
 git clone https://github.com/srinesh-vyd/Retail-Orders-Python-SQLProject.git
 cd Retail-Orders-Python-SQLProject
 ```
+2. Create a new python environment
+3. Create a new Jupter notebook 
+3. Install required Python libraries:
+```jupyter
+!pip install kaggle
+import kaggle
+```
