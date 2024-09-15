@@ -1,7 +1,7 @@
 # Data Analysis Project Using SQL in MySQL
 This project is a simple data analysis pipeline using a dataset from Kaggle. The dataset was downloaded via the Kaggle API, transformed using Python and Pandas, and loaded into a MySQL database. Finally, SQL queries were used to analyze the data.
 ## Table of Contents
-1. Project Overview(#Project Overview)
+1. [Project Overview](#project-overview)
 2. Technologies Used
 3. Installation
 4. Dataset
